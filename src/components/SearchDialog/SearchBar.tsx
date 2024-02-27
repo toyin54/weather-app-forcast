@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Github } from 'lucide-react'
-
+import defaultStates from '@/app/utils/defaultLocals'
 import {
   Command,
   CommandEmpty,
@@ -50,7 +50,9 @@ export default function SearchBar() {
              <CommandInput 
              placeholder='Type in a command or search ...'/>
              <ul className='px-3 pb-2'>
-              <p className='p-2 text-sm text-muted-foreground'>Suggestions</p>
+              <p className='p-2 text-sm text-muted-foreground'>Suggestions
+              {defaultStates[0].country}
+              </p>
              </ul>
             </Command>
           </DialogContent>
